@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+</head>
+<body>
+<div id="container">
+      <script>
+      window.RufflePlayer = window.RufflePlayer || {};
+      window.RufflePlayer.config = {
+      letterbox: "on",
+      autoplay: "on",
+      backgroundColor: null,
+      unmuteOverlay: "hidden",
+}
+     window.RufflePlayer = window.RufflePlayer || {};
+    window.addEventListener("load", (event) => {
+        const ruffle = window.RufflePlayer.newest();
+        const player = ruffle.createPlayer();
+        const container = document.getElementById("container");
+        container.appendChild(player);
+        player.load("WHG_LVLSelect.swf"); 
+	
+    });
+</script>
+<style>
+ruffle-player, ruffle-object, ruffle-embed {
+     --logo-display: block;
+       width: 100%;
+       height: 98.25vh;
+}
+
+body{
+overflow: hidden;
+
+}
+</style>
+ </body>
+</html>
